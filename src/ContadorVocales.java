@@ -1,6 +1,6 @@
 public class ContadorVocales {
     int contadorVocales = 0;
-    public void incrementar(){
+    public synchronized void incrementar(){
         contadorVocales++;
     }
     public int getContadorVocales() {
