@@ -19,6 +19,17 @@ public class Main {
         hiloO.start();
         hiloU.start();
 
+        try {
+            hiloA.join();
+            hiloE.join();
+            hiloI.join();
+            hiloO.join();
+            hiloU.join();
+
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
         System.out.println("El total de vocales es: " + cv.getContadorVocales());
 
     }

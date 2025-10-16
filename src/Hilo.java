@@ -6,7 +6,7 @@ public class Hilo extends Thread{
     private final String texto;
     private int contadorVocales = 0;
     private final Object lock = new Object();
-    private ContadorVocales cv;
+    private final ContadorVocales cv;
 
     public Hilo(char vocal, String texto, ContadorVocales cv) {
         this.vocal = vocal;
