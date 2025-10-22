@@ -2,9 +2,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Buenas noches, programadores de pacotilla");
-        System.out.println("Estamos aquí reunidos para seguir en este arduo camino de aprendizaje sobre Java");
-        System.out.println("Esta noche vamos a realizar un contador de vocales, asi que venga ingresa una frase toda chula aqui abajo:");
+
+        System.out.println("Venga ingresa una frase toda chula aqui abajo:");
         ContadorVocales cv = new ContadorVocales();
         Scanner sc = new Scanner(System.in);
         String frase = sc.nextLine();
@@ -19,7 +18,7 @@ public class Main {
         hiloO.start();
         hiloU.start();
 
-        try {
+        try{
             hiloA.join();
             hiloE.join();
             hiloI.join();
