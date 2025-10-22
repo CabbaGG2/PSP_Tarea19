@@ -1,7 +1,9 @@
 public class ContadorVocales {
-    int contadorVocales = 0;
-    public void incrementar(){
-        contadorVocales++;
+    static int contadorVocales = 0;
+    private final Object candado = new Object();
+
+    public synchronized static void incrementar(){
+            contadorVocales++;
     }
     public int getContadorVocales() {
         return contadorVocales;
